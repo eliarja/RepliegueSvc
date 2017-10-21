@@ -1,0 +1,24 @@
+APIs Cliente Web
+===============================================
+GET http://localhost:63003/json.svc/validateuser/{user}
+RESPONSE Boolean true|false
+
+GET http://localhost:63003/json.svc/getpin/{serial}/{user}
+RESPONSE Json {exist: true|false, pin: '(6 digit)', votingBookCode:'(centro)'}
+
+GET http://localhost:63003/json.svc/isdone/{serial}
+RESPONSE Boolean true|false
+
+APIs Cliente Maquina
+===============================================
+ValidPinResponse 	ValidatePin(string pin);
+void 				UploadFile(FileUploadMessage request);
+
+Estructura
+===============================================
+
+ValidPinResponse
+{
+	public bool BackupFiles;
+	public string votingBookCode; 
+}
